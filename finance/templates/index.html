@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Homepage | Summary
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <h2> Summary:1</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Stocks Name</th>
+                <th>Number Of Shares</th>
+                <th>Current Price</th>
+                <th>Holding</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock_detail in stock_details_1 %}
+                <tr>
+                    <td>{{ stock_detail["stock_name"] }}</td>
+                    <td>{{ stock_detail["share_count"] }}</td>
+                    <td>{{ stock_detail["current_value"]  | usd }}</td>
+                    <td>{{ stock_detail["holding"]  | usd }}</td>
+                </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+        <h2>Summary 2</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Balance</th>
+                    <th>Grand Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>{{ stock_details_2["user_name"] }}</td>
+                        <td>{{ stock_details_2["balance"]  | usd}}</td>
+                        <td>{{ stock_details_2["grand_total"]  | usd}}</td>
+                    </tr>
+            </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>price</th>
+                <th>symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ quote_dict.name }}</td>
+                <td>{{ quote_dict.price }}</td>
+                <td>{{ quote_dict.symbol }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/quote" class="btn btn-info text-center">Get new quote</a>
+</div>
+{% endblock %}

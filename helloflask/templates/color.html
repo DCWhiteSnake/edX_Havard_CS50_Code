@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div>
+    <h2>You selected: </h2>
+    <div class="block" id="{{ color }}"></div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () =>{
+        let colors = ["blue", "red"];
+        let span = document.querySelector(".block");
+        let id = span.id;
+        switch (id){
+            case colors[0]:
+                span.style.backgroundColor= "blue";
+                span.style.width =  "30px";
+                span.style.height = "30px";
+                break;
+            case colors[1]:
+                span.style.backgroundColor = "red";
+                span.style.width =  "30px";
+                span.style.height = "30px";
+                break;
+            default:
+                break;
+        }
+    });
+    </script>
+{% endblock %}

@@ -1,0 +1,11 @@
+sort1 uses: BUBBLE
+
+How do you know?: It has an quadratic growth rate from sorted to reversed
+
+sort2 uses: MERGE
+
+How do you know?: It has the same growth rate for both Sorted and reversed values
+
+sort3 uses: SELECTION
+
+How do you know?: It has similar growth rate for both sorted and random and similar growth rate to reversed sorted values.

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Quote
+{% endblock %}
+
+{% block main %}
+<form action="/buy" method="post">
+    <div class="form-floating mb-3">
+        <input autocomplete="off" autofocus class="form-control" id="symbol" name="symbol"
+            placeholder="Company symbol ie., nflx for Netflix" type="text">
+        <label for="symbol">Symbol</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input autocomplete="off" autofocus class="form-control" id="shares" name="shares"
+            placeholder="Number of shares ie., 200" type="number">
+        <label for="shares">Share</label>
+    </div>
+    <button class="btn btn-info" type="submit">Purchase</button>
+</form>
+{% endblock %}

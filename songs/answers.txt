@@ -1,0 +1,10 @@
+If songs.db contains the top 100 songs of one listener from 2018,
+how would you characterize their audio aura? I would do sentiments analysis on the title of the songs,
+giving the average a weight of 2,  then I'd look at the average energy, valence, and danceability with a weight
+of 3, 3, 2 respectively.
+
+Hypothesize about why the way you’ve calculated this aura might not
+be very representative of the listener.
+What better ways of calculating this aura would you propose?
+My selection of weight are purely based on how I feel. A more accurate method would be to poll the lyrics
+from an external source and then perform sentiment analysis on that data alone.
